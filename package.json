@@ -1,0 +1,75 @@
+{
+  "name": "giggle-guard",
+  "version": "1.0.0",
+  "description": "🛡️ Giggle Guard - A curated collection of 500+ hilarious validation messages that turn boring form errors into delightful user experiences. Make your users smile instead of rage-quit!",
+  "main": "dist/index.js",
+  "type": "module",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "type-check": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm run test",
+    "clean": "rimraf dist"
+  },
+  "keywords": [
+    "validation",
+    "error-messages",
+    "funny",
+    "humor",
+    "forms",
+    "typescript",
+    "javascript",
+    "react",
+    "vue",
+    "angular",
+    "svelte",
+    "form-validation",
+    "giggle",
+    "giggle-guard",
+    "friendly-errors",
+    "developer-tools",
+    "form-helper"
+  ],
+  "author": "Pratik Shikhaliya <pratikshikhaliya@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pratik-shikhaliya/giggle-guard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pratik-shikhaliya/giggle-guard/issues"
+  },
+  "homepage": "https://github.com/pratik-shikhaliya/giggle-guard#readme",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/jest": "^29.5.8",
+    "jest": "^29.7.0",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.5.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.8.1"
+  }
+}
