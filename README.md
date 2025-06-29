@@ -315,6 +315,6 @@ If Giggle Guard made you (or your users) smile, give us a ⭐ and spread the lau
 
 ---
 
-**Made with ❤️ by Pratik Shikhaliya — who’s tired of boring error messages.**
+**Made with ❤️ by [Pratik Shikhaliya](https://github.com/pratik-shikhaliya) — who’s tired of boring error messages.**
 
 _Remember: Life’s too short for “This field is required”_
