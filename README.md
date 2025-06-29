@@ -296,7 +296,7 @@ A: Yup! Use `getStats()` for field/tone/error type analytics.
 A: Yes! You can override the tone per message call.
 
 **Q: Is it production-ready?**\
-A: Yes! Used in live apps, tested with 500+ messages.
+A: Yes! Used in live apps, tested with 3000+ messages.
 
 ## 🤝 Contributing
 
