@@ -1,1899 +1,2426 @@
-import { ValidationMessage } from '../types';
+import { ValidationMessage } from "../types";
 
 export const dateMessages: ValidationMessage[] = [
-  // --- Required Messages ---
-
-  // Required - Witty (5 messages)
-  {
-    id: 'date_required_witty_001',
-    message: "Don't leave us hanging! We need a date to mark on the calendar.",
-    tone: 'witty',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_witty_002',
-    message: "Time waits for no one, especially not for a missing date!",
-    tone: 'witty',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_witty_003',
-    message: "This date field is feeling a bit lonely. Care to fill it?",
-    tone: 'witty',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_witty_004',
-    message: "Our chronometer says you forgot the date. Please provide it!",
-    tone: 'witty',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_witty_005',
-    message: "To proceed, you'll need to set the date. Don't be late!",
-    tone: 'witty',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-
-  // Required - Dark (5 messages)
-  {
-    id: 'date_required_dark_001',
-    message: "The timeline is unwritten. A date is demanded.",
-    tone: 'dark',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_dark_002',
-    message: "Without a date, the future remains shrouded in uncertainty.",
-    tone: 'dark',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_dark_003',
-    message: "The sands of time refuse to flow. Provide the date.",
-    tone: 'dark',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_dark_004',
-    message: "A void exists in the calendar. Fill it with a date.",
-    tone: 'dark',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_dark_005',
-    message: "The passage of moments halts. The required date is missing.",
-    tone: 'dark',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-
-  // Required - Funny (5 messages)
-  {
-    id: 'date_required_funny_001',
-    message: "Did your calendar run away? We need a date here!",
-    tone: 'funny',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_funny_002',
-    message: "My psychic powers tell me you forgot the date. Please enter it!",
-    tone: 'funny',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_funny_003',
-    message: "Don't leave this date on read! It's required!",
-    tone: 'funny',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_funny_004',
-    message: "Our time machine can't function without a valid date!",
-    tone: 'funny',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_funny_005',
-    message: "This date field is giving me the silent treatment. Input required!",
-    tone: 'funny',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-
-  // Required - Casual (5 messages)
-  {
-    id: 'date_required_casual_001',
-    message: "Please enter a date to continue.",
-    tone: 'casual',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_casual_002',
-    message: "We need a date here.",
-    tone: 'casual',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_casual_003',
-    message: "Don't forget to add the date.",
-    tone: 'casual',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_casual_004',
-    message: "Just need a date for this.",
-    tone: 'casual',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_casual_005',
-    message: "This field requires a date.",
-    tone: 'casual',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-
-  // Required - Sarcastic (5 messages)
-  {
-    id: 'date_required_sarcastic_001',
-    message: "Oh, you thought dates were optional? How adorable.",
-    tone: 'sarcastic',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_sarcastic_002',
-    message: "Of course, we'll just guess the date. No need for your input, really.",
-    tone: 'sarcastic',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_sarcastic_003',
-    message: "Because temporal precision is so overrated. Please provide a date.",
-    tone: 'sarcastic',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_sarcastic_004',
-    message: "The calendar simply manifests a date, right? No? Then enter one.",
-    tone: 'sarcastic',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_sarcastic_005',
-    message: "Such a minor detail, the date. Except it's required.",
-    tone: 'sarcastic',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-
-  // Required - Nerdy (5 messages)
-  {
-    id: 'date_required_nerdy_001',
-    message: "Error 400: Date parameter missing. Requires 'YYYY-MM-DD' format.",
-    tone: 'nerdy',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_nerdy_002',
-    message: "Null value detected for 'date' field. Input required for timestamp generation.",
-    tone: 'nerdy',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_nerdy_003',
-    message: "System cannot compute chronological sequence without a date.",
-    tone: 'nerdy',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_nerdy_004',
-    message: "Dependent variable 'date' is undefined. Please define to proceed.",
-    tone: 'nerdy',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_nerdy_005',
-    message: "Critical 'date' attribute is not populated. Data integrity compromised.",
-    tone: 'nerdy',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-
-  // Required - PopCulture (5 messages)
-  {
-    id: 'date_required_popCulture_001',
-    message: "Great Scott! We need a date to flux capacitor the process!",
-    tone: 'popCulture',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_popCulture_002',
-    message: "Winter is coming, but first, a date is required!",
-    tone: 'popCulture',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_popCulture_003',
-    message: "To infinity and beyond, but not without a date!",
-    tone: 'popCulture',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_popCulture_004',
-    message: "May the Force be with you... and your date entry!",
-    tone: 'popCulture',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_popCulture_005',
-    message: "This isn't the date you're looking for... because there isn't one!",
-    tone: 'popCulture',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-
-  // Required - Millennial (5 messages)
-  {
-    id: 'date_required_millennial_001',
-    message: "This date field is giving 'empty vibes'. Needs your info, fam.",
-    tone: 'millennial',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_millennial_002',
-    message: "Low-key, we need a date to complete this. No cap.",
-    tone: 'millennial',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_millennial_003',
-    message: "Adulting moment: providing the date. It's required, sweetie!",
-    tone: 'millennial',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_millennial_004',
-    message: "Vibes check: date's pending. Gotta drop those deets.",
-    tone: 'millennial',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_millennial_005',
-    message: "Not to be extra, but this date field is literally empty. Fill it!",
-    tone: 'millennial',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-
-  // Required - GenZ (5 messages)
-  {
-    id: 'date_required_genZ_001',
-    message: "POV: You forgot the date. Big L, gotta enter it.",
-    tone: 'genZ',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_genZ_002',
-    message: "This date field is blank, it's giving 'no progress'. Pls input.",
-    tone: 'genZ',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_genZ_003',
-    message: "Slay the form by adding a date. It's required, periodt.",
-    tone: 'genZ',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_genZ_004',
-    message: "Cap, no date here. We need it, for real for real.",
-    tone: 'genZ',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_genZ_005',
-    message: "This field is empty, and it's not aesthetic. Drop your date, bestie.",
-    tone: 'genZ',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-
-  // Required - Professional (5 messages)
-  {
-    id: 'date_required_professional_001',
-    message: "A date is required for this field. Please provide the necessary information.",
-    tone: 'professional',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_professional_002',
-    message: "Please enter a valid date to complete this section.",
-    tone: 'professional',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_professional_003',
-    message: "The date field cannot be left blank. Input is mandatory.",
-    tone: 'professional',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_professional_004',
-    message: "Kindly specify a date in the designated field.",
-    tone: 'professional',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_professional_005',
-    message: "To ensure accurate record-keeping, a date must be entered.",
-    tone: 'professional',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-
-  // Required - Friendly (5 messages)
-  {
-    id: 'date_required_friendly_001',
-    message: "Just need a date here to finish things up!",
-    tone: 'friendly',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_friendly_002',
-    message: "Hey! Could you please add a date in this field?",
-    tone: 'friendly',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_friendly_003',
-    message: "Almost there! Just pop a date into this box.",
-    tone: 'friendly',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_friendly_004',
-    message: "To make sure everything's correct, we'll need a date here.",
-    tone: 'friendly',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_friendly_005',
-    message: "Quick step! Please fill in the date.",
-    tone: 'friendly',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-
-  // Required - Motivational (5 messages)
-  {
-    id: 'date_required_motivational_001',
-    message: "Set your course! A date is required to chart your progress!",
-    tone: 'motivational',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_motivational_002',
-    message: "Define your moment! Providing a date propels you forward!",
-    tone: 'motivational',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_motivational_003',
-    message: "The timeline awaits your input! Enter the date and seize your destiny!",
-    tone: 'motivational',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_motivational_004',
-    message: "Unlock the next chapter! A date is the key to proceeding!",
-    tone: 'motivational',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_motivational_005',
-    message: "Your journey needs a starting point! Provide the date and begin!",
-    tone: 'motivational',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-
-  // Required - Mysterious (5 messages)
-  {
-    id: 'date_required_mysterious_001',
-    message: "The scroll of time yearns for its inscription. A date is sought.",
-    tone: 'mysterious',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_mysterious_002',
-    message: "A temporal void awaits definition. Reveal the chosen date.",
-    tone: 'mysterious',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_mysterious_003',
-    message: "The chronomancer demands a specific moment. The date must be known.",
-    tone: 'mysterious',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_mysterious_004',
-    message: "The web of causality cannot be spun without this anchor point.",
-    tone: 'mysterious',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_mysterious_005',
-    message: "Only by marking time can the sequence unfold. A date is required.",
-    tone: 'mysterious',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-
-  // Required - Dramatic (5 messages)
-  {
-    id: 'date_required_dramatic_001',
-    message: "A temporal anomaly! The missing date halts all progress!",
-    tone: 'dramatic',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_dramatic_002',
-    message: "The very fabric of destiny unravels without this vital date!",
-    tone: 'dramatic',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_dramatic_003',
-    message: "Behold the chasm of uncertainty! The date must be provided!",
-    tone: 'dramatic',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_dramatic_004',
-    message: "A silent scream echoes from the empty date field! Fill it!",
-    tone: 'dramatic',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_dramatic_005',
-    message: "The universe demands its schedule! The date is paramount!",
-    tone: 'dramatic',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-
-  // Required - Poetic (5 messages)
-  {
-    id: 'date_required_poetic_001',
-    message: "The calendar awaits, a canvas blank and wide. Imprint the moment, let the hours ride.",
-    tone: 'poetic',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_poetic_002',
-    message: "No journey starts, nor story can unfold. Until a date, in timely script, is told.",
-    tone: 'poetic',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_poetic_003',
-    message: "The river of time, a current yet unknown. Bestow a date, upon this digital throne.",
-    tone: 'poetic',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_poetic_004',
-    message: "A silent void, where seconds dare not fly. Until your chosen date, adorns the digital sky.",
-    tone: 'poetic',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-  {
-    id: 'date_required_poetic_005',
-    message: "The tapestry of days, begins with a single thread. The date's bright dawn, must now be softly spread.",
-    tone: 'poetic',
-    fieldType: 'date',
-    errorType: 'required',
-    category: 'Date'
-  },
-
-  // --- Invalid Messages (e.g., wrong format, impossible date like Feb 30) ---
-
-  // Invalid - Witty (5 messages)
-  {
-    id: 'date_invalid_witty_001',
-    message: "That date looks like it's from another dimension! Please try a valid one.",
-    tone: 'witty',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_witty_002',
-    message: "Oops! Your date seems to have gone rogue. Could you correct it?",
-    tone: 'witty',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_witty_003',
-    message: "Our calendar elves say this date is a no-go. Invalid format!",
-    tone: 'witty',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_witty_004',
-    message: "This date isn't playing by the rules. Please enter a valid one.",
-    tone: 'witty',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_witty_005',
-    message: "Did your date come from a fantasy novel? It's not valid!",
-    tone: 'witty',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-
-  // Invalid - Dark (5 messages)
-  {
-    id: 'date_invalid_dark_001',
-    message: "The temporal sequence is fractured. This date is an illusion.",
-    tone: 'dark',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_dark_002',
-    message: "A dissonant chord in the symphony of time. The date is false.",
-    tone: 'dark',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_dark_003',
-    message: "The threads of fate cannot weave with this malformed date.",
-    tone: 'dark',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_dark_004',
-    message: "Its form is corrupted. This date holds no true existence.",
-    tone: 'dark',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_dark_005',
-    message: "A broken moment. This date cannot be reconciled.",
-    tone: 'dark',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-
-  // Invalid - Funny (5 messages)
-  {
-    id: 'date_invalid_funny_001',
-    message: "Did you enter 'February 30th'? Because that date doesn't exist!",
-    tone: 'funny',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_funny_002',
-    message: "Our system says 'nope' to this date. Check for typos!",
-    tone: 'funny',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_funny_003',
-    message: "This date is clearly a prankster. It refuses to be valid!",
-    tone: 'funny',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_funny_004',
-    message: "Is this date from a parallel universe? Because it's not working here!",
-    tone: 'funny',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_funny_005',
-    message: "Warning: Entering impossible dates may lead to a visit from the time police!",
-    tone: 'funny',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-
-  // Invalid - Casual (5 messages)
-  {
-    id: 'date_invalid_casual_001',
-    message: "The date you entered is invalid. Please check it.",
-    tone: 'casual',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_casual_002',
-    message: "That's not a valid date format. Try again.",
-    tone: 'casual',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_casual_003',
-    message: "There's an issue with your date entry.",
-    tone: 'casual',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_casual_004',
-    message: "Please enter a correct date.",
-    tone: 'casual',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_casual_005',
-    message: "Your date information seems incorrect.",
-    tone: 'casual',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-
-  // Invalid - Sarcastic (5 messages)
-  {
-    id: 'date_invalid_sarcastic_001',
-    message: "Congratulations, you've invented a new date! Now, how about a real one?",
-    tone: 'sarcastic',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_sarcastic_002',
-    message: "I'm sure 'December 32nd' is a very important date. It's not.",
-    tone: 'sarcastic',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_sarcastic_003',
-    message: "Did you just mash your keyboard? That's not how dates work.",
-    tone: 'sarcastic',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_sarcastic_004',
-    message: "Excellent attempt at a time paradox. Now, for the valid date?",
-    tone: 'sarcastic',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_sarcastic_005',
-    message: "This date is so invalid, it's almost impressive. Please enter a valid one.",
-    tone: 'sarcastic',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-
-  // Invalid - Nerdy (5 messages)
-  {
-    id: 'date_invalid_nerdy_001',
-    message: "Date parsing error: Input does not conform to ISO 8601 or common formats.",
-    tone: 'nerdy',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_nerdy_002',
-    message: "Date object instantiation failed: Invalid day/month combination detected.",
-    tone: 'nerdy',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_nerdy_003',
-    message: "Chronological anomaly: The provided date is logically impossible.",
-    tone: 'nerdy',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_nerdy_004',
-    message: "Input validation error: Date string fails format regex.",
-    tone: 'nerdy',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_nerdy_005',
-    message: "Temporal data stream corrupted. Recalibration requires a valid date.",
-    tone: 'nerdy',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-
-  // Invalid - PopCulture (5 messages)
-  {
-    id: 'date_invalid_popCulture_001',
-    message: "This date isn't the timeline we're looking for. Invalid!",
-    tone: 'popCulture',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_popCulture_002',
-    message: "You've got the wrong date, Neo. This one is invalid.",
-    tone: 'popCulture',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_popCulture_003',
-    message: "My Spidey-sense is tingling... because this date is invalid.",
-    tone: 'popCulture',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_popCulture_004',
-    message: "It's like trying to fit a square date in a round hole. Invalid!",
-    tone: 'popCulture',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_popCulture_005',
-    message: "Houston, we have a time warp. Your date is invalid.",
-    tone: 'popCulture',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-
-  // Invalid - Millennial (5 messages)
-  {
-    id: 'date_invalid_millennial_001',
-    message: "This date is giving 'not valid'. Check your deets, sis.",
-    tone: 'millennial',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_millennial_002',
-    message: "Vibes check: this date isn't hitting. It's invalid, fam.",
-    tone: 'millennial',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_millennial_003',
-    message: "Not gonna lie, this date is invalid. Plz correct.",
-    tone: 'millennial',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_millennial_004',
-    message: "Adulting fail: invalid date. Time to re-enter, sweetie.",
-    tone: 'millennial',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_millennial_005',
-    message: "This date data is a whole mood, but it's the 'invalid' mood. Double check!",
-    tone: 'millennial',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-
-  // Invalid - GenZ (5 messages)
-  {
-    id: 'date_invalid_genZ_001',
-    message: "POV: Your date is wrong. Big L. Gotta fix it.",
-    tone: 'genZ',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_genZ_002',
-    message: "This date info is not bussin'. It's invalid.",
-    tone: 'genZ',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_genZ_003',
-    message: "Slay the form by entering a valid date. This one's cap.",
-    tone: 'genZ',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_genZ_004',
-    message: "It's giving 'invalid date'. Check your digits, bestie.",
-    tone: 'genZ',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_genZ_005',
-    message: "Fr fr, this date isn't valid. Try again, for real.",
-    tone: 'genZ',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-
-  // Invalid - Professional (5 messages)
-  {
-    id: 'date_invalid_professional_001',
-    message: "The date provided is not valid. Please verify and re-enter.",
-    tone: 'professional',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_professional_002',
-    message: "An invalid date format has been detected. Kindly correct the input.",
-    tone: 'professional',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_professional_003',
-    message: "The date entered does not pass validation. Please ensure accuracy.",
-    tone: 'professional',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_professional_004',
-    message: "Invalid date information. Please check the date and try again.",
-    tone: 'professional',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_professional_005',
-    message: "The submitted date is not recognized as valid. Review your entry.",
-    tone: 'professional',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-
-  // Invalid - Friendly (5 messages)
-  {
-    id: 'date_invalid_friendly_001',
-    message: "Oops! It looks like there's a typo in your date.",
-    tone: 'friendly',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_friendly_002',
-    message: "Hey! Your date doesn't seem to be valid. Could you check it?",
-    tone: 'friendly',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_friendly_003',
-    message: "No worries, but your date seems a little off. Can you try again?",
-    tone: 'friendly',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_friendly_004',
-    message: "To proceed, we need a valid date. Yours looks incorrect.",
-    tone: 'friendly',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_friendly_005',
-    message: "Just a heads-up, there's an issue with your date. Please re-enter it.",
-    tone: 'friendly',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-
-  // Invalid - Motivational (5 messages)
-  {
-    id: 'date_invalid_motivational_001',
-    message: "Don't let an invalid date stop you! Double-check and conquer your task!",
-    tone: 'motivational',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_motivational_002',
-    message: "A minor setback, not a defeat! Correct your date and proceed!",
-    tone: 'motivational',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_motivational_003',
-    message: "Precision is power! Refine your date entry for a flawless submission.",
-    tone: 'motivational',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_motivational_004',
-    message: "Every obstacle is an opportunity! Correct the invalid date and achieve your goal!",
-    tone: 'motivational',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_motivational_005',
-    message: "Your success awaits! A valid date is the key to unlock it.",
-    tone: 'motivational',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-
-  // Invalid - Mysterious (5 messages)
-  {
-    id: 'date_invalid_mysterious_001',
-    message: "The chronological sequence is veiled. This date holds no truth.",
-    tone: 'mysterious',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_mysterious_002',
-    message: "A temporal paradox detected. This date does not exist within the known fabric.",
-    tone: 'mysterious',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_mysterious_003',
-    message: "The whispers of time reject this entry. The date is a falsehood.",
-    tone: 'mysterious',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_mysterious_004',
-    message: "Its passage is unseen. The date cannot be reconciled with reality.",
-    tone: 'mysterious',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_mysterious_005',
-    message: "A forgotten moment. This date holds no place in the grand design.",
-    tone: 'mysterious',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-
-  // Invalid - Dramatic (5 messages)
-  {
-    id: 'date_invalid_dramatic_001',
-    message: "A catastrophic temporal distortion! This date is utterly invalid!",
-    tone: 'dramatic',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_dramatic_002',
-    message: "The cosmic clock rebels! This date is a fabrication!",
-    tone: 'dramatic',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_dramatic_003',
-    message: "Behold, the error of chronology! Your date is a phantom!",
-    tone: 'dramatic',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_dramatic_004',
-    message: "The very flow of time is disrupted by this flawed input!",
-    tone: 'dramatic',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_dramatic_005',
-    message: "A scream of discord from the calendar! The date is not, cannot be!",
-    tone: 'dramatic',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-
-  // Invalid - Poetic (5 messages)
-  {
-    id: 'date_invalid_poetic_001',
-    message: "A broken rhythm, where moments lose their sway. The chosen date, finds no harmonious day.",
-    tone: 'poetic',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_poetic_002',
-    message: "Like fragmented whispers, truth cannot abide. This date's own essence, cannot here reside.",
-    tone: 'poetic',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_poetic_003',
-    message: "The destined path, by error is undone. A valid date, for journeys to be spun.",
-    tone: 'poetic',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_poetic_004',
-    message: "A silent discord, where numbers go astray. Find harmony, for this unfolding day.",
-    tone: 'poetic',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-  {
-    id: 'date_invalid_poetic_005',
-    message: "The clock's soft ticking, finds no solace here. A flawed design, dispelling joy and fear.",
-    tone: 'poetic',
-    fieldType: 'date',
-    errorType: 'invalid',
-    category: 'Date'
-  },
-
-  // --- inPast Messages ---
-
-  // inPast - Witty (5 messages)
-  {
-    id: 'date_inPast_witty_001',
-    message: "That date is so last year! We need something more current.",
-    tone: 'witty',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_witty_002',
-    message: "Looks like your date is living in the good old days. We need a future one!",
-    tone: 'witty',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_witty_003',
-    message: "This date has already made its grand exit. Please choose one that hasn't!",
-    tone: 'witty',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_witty_004',
-    message: "Uh oh, your date tried to pull a time travel trick. It's in the past!",
-    tone: 'witty',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_witty_005',
-    message: "Your date is older than sliced bread. Please pick a future date!",
-    tone: 'witty',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-
-  // inPast - Dark (5 messages)
-  {
-    id: 'date_inPast_dark_001',
-    message: "The moment has passed into shadow. This date holds no future.",
-    tone: 'dark',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_dark_002',
-    message: "A memory, not a prophecy. This date lies in the forgotten past.",
-    tone: 'dark',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_dark_003',
-    message: "Its time has concluded. The past cannot be the present.",
-    tone: 'dark',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_dark_004',
-    message: "The sands of the hourglass have fallen. This date is spent.",
-    tone: 'dark',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_dark_005',
-    message: "A chilling echo from what was. Only the future may proceed.",
-    tone: 'dark',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-
-  // inPast - Funny (5 messages)
-  {
-    id: 'date_inPast_funny_001',
-    message: "Did your calendar get stuck in a time loop? This date is ancient history!",
-    tone: 'funny',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_funny_002',
-    message: "Your date is so retro, it's in the past! Pick a date that hasn't happened yet.",
-    tone: 'funny',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_funny_003',
-    message: "This date needs a history book, not a future event! Please update.",
-    tone: 'funny',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_funny_004',
-    message: "Our system thinks you're stuck in a time machine. Date's in the past!",
-    tone: 'funny',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_funny_005',
-    message: "Warning: Entering past dates may attract dinosaurs. Please choose a future date!",
-    tone: 'funny',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-
-  // inPast - Casual (5 messages)
-  {
-    id: 'date_inPast_casual_001',
-    message: "The date you entered is in the past.",
-    tone: 'casual',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_casual_002',
-    message: "Please select a date that is today or in the future.",
-    tone: 'casual',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_casual_003',
-    message: "This date has already passed.",
-    tone: 'casual',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_casual_004',
-    message: "You need to choose a future date.",
-    tone: 'casual',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_casual_005',
-    message: "The date is in the past. Pick a new one.",
-    tone: 'casual',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-
-  // inPast - Sarcastic (5 messages)
-  {
-    id: 'date_inPast_sarcastic_001',
-    message: "Remarkable! You've successfully chosen a date that has already happened. Try a future one.",
-    tone: 'sarcastic',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_sarcastic_002',
-    message: "I'm sure we can bend the laws of physics for your past date. Or you could just pick a new one.",
-    tone: 'sarcastic',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_sarcastic_003',
-    message: "Did you mean to submit this form in 2005? Your date is in the past.",
-    tone: 'sarcastic',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_sarcastic_004',
-    message: "Yes, because old dates are just as relevant as future ones. They're not.",
-    tone: 'sarcastic',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_sarcastic_005',
-    message: "This date has seen better days. Many, many better days ago. It's in the past.",
-    tone: 'sarcastic',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-
-  // inPast - Nerdy (5 messages)
-  {
-    id: 'date_inPast_nerdy_001',
-    message: "Timestamp comparison error: Input date precedes current system date. Backward time travel not permitted.",
-    tone: 'nerdy',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_nerdy_002',
-    message: "Date validity check failed: Date is less than current_date. Future date required.",
-    tone: 'nerdy',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_nerdy_003',
-    message: "Temporal paradox detected: Event date is in historical domain. Requires future domain.",
-    tone: 'nerdy',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_nerdy_004',
-    message: "Date object property 'isFuture' evaluates to false. Update required.",
-    tone: 'nerdy',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_nerdy_005',
-    message: "Chronometer out of sync: Input date is in the past. Recalibrate to current or future.",
-    tone: 'nerdy',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-
-  // inPast - PopCulture (5 messages)
-  {
-    id: 'date_inPast_popCulture_001',
-    message: "This date is from a long time ago in a galaxy far, far away. We need a current one!",
-    tone: 'popCulture',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_popCulture_002',
-    message: "You shall not pass... with a past date! Choose a future one!",
-    tone: 'popCulture',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_popCulture_003',
-    message: "It's a trap! This date is in the past. We need to go forward!",
-    tone: 'popCulture',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_popCulture_004',
-    message: "This date is like a vintage movie. Charming, but not for future use!",
-    tone: 'popCulture',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_popCulture_005',
-    message: "Your date is off the air, it's from the past! Tune into a future one.",
-    tone: 'popCulture',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-
-  // inPast - Millennial (5 messages)
-  {
-    id: 'date_inPast_millennial_001',
-    message: "This date is giving 'old news'. It's in the past, fam.",
-    tone: 'millennial',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_millennial_002',
-    message: "Vibes check: your date is from a bygone era. Needs an update, sweetie.",
-    tone: 'millennial',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_millennial_003',
-    message: "Not gonna lie, this date is past due. Time for an adulting moment!",
-    tone: 'millennial',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_millennial_004',
-    message: "Your date is a whole mood, but it's the 'throwback' mood. Get a future one!",
-    tone: 'millennial',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_millennial_005',
-    message: "This date has aged out. It's in the past, no cap.",
-    tone: 'millennial',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-
-  // inPast - GenZ (5 messages)
-  {
-    id: 'date_inPast_genZ_001',
-    message: "POV: Your date is in the past. Big L, gotta get a new one.",
-    tone: 'genZ',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_genZ_002',
-    message: "This date is giving 'vintage'. It's expired, bestie.",
-    tone: 'genZ',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_genZ_003',
-    message: "Slay the form by picking a future date. This one's from last season, periodt.",
-    tone: 'genZ',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_genZ_004',
-    message: "Cap, this date is wild, but it's in the past. For real for real, pick a future one.",
-    tone: 'genZ',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_genZ_005',
-    message: "This date is not bussin' because it's already happened. Time for an upgrade.",
-    tone: 'genZ',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-
-  // inPast - Professional (5 messages)
-  {
-    id: 'date_inPast_professional_001',
-    message: "The selected date is in the past. Please choose a current or future date.",
-    tone: 'professional',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_professional_002',
-    message: "Kindly update your date selection to a non-past value.",
-    tone: 'professional',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_professional_003',
-    message: "The event date must be on or after today's date.",
-    tone: 'professional',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_professional_004',
-    message: "Please provide a date that has not yet occurred or is today's date.",
-    tone: 'professional',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_professional_005',
-    message: "The entered date precedes the current date and is thus invalid for this field.",
-    tone: 'professional',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-
-  // inPast - Friendly (5 messages)
-  {
-    id: 'date_inPast_friendly_001',
-    message: "Oops! It looks like your date is in the past.",
-    tone: 'friendly',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_friendly_002',
-    message: "Hey! Your date is before today. Could you pick a new one?",
-    tone: 'friendly',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_friendly_003',
-    message: "No worries, but this date has already happened. Please choose a future one!",
-    tone: 'friendly',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_friendly_004',
-    message: "Just a friendly heads-up, your date isn't valid anymore as it's passed.",
-    tone: 'friendly',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_friendly_005',
-    message: "Almost ready! Just update your date as it appears to be from the past.",
-    tone: 'friendly',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-
-  // inPast - Motivational (5 messages)
-  {
-    id: 'date_inPast_motivational_001',
-    message: "Leave the past behind! Choose a future date and seize your opportunity!",
-    tone: 'motivational',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_motivational_002',
-    message: "Embrace the future! A new date means fresh beginnings for your plans.",
-    tone: 'motivational',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_motivational_003',
-    message: "The path to success is forward! Choose a current or future date to keep moving!",
-    tone: 'motivational',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_motivational_004',
-    message: "Your potential is boundless! A quick date update is all that stands between you and your goal.",
-    tone: 'motivational',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_motivational_005',
-    message: "Seize the moment! Replace your past date and unlock endless possibilities.",
-    tone: 'motivational',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-
-  // inPast - Mysterious (5 messages)
-  {
-    id: 'date_inPast_mysterious_001',
-    message: "The temporal sigil marks a time that has passed. Its power is diminished.",
-    tone: 'mysterious',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_mysterious_002',
-    message: "Its allotted span concluded. This date is but an echo in the annals of time.",
-    tone: 'mysterious',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_mysterious_003',
-    message: "The prophecy of its passing has been fulfilled. This date is no more.",
-    tone: 'mysterious',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_mysterious_004',
-    message: "A relic from a bygone era. This date offers no current passage.",
-    tone: 'mysterious',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_mysterious_005',
-    message: "The veil of time has fallen upon this date. It lies dormant in memory.",
-    tone: 'mysterious',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-
-  // inPast - Dramatic (5 messages)
-  {
-    id: 'date_inPast_dramatic_001',
-    message: "A tragic reversal of destiny! This date dwells in the unforgiving past!",
-    tone: 'dramatic',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_dramatic_002',
-    message: "The relentless march of time consumes this date! It is no more!",
-    tone: 'dramatic',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_dramatic_003',
-    message: "Behold, the relic of a former validity! Your date is expired from the present!",
-    tone: 'dramatic',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_dramatic_004',
-    message: "The very flow of progress is severed by this ancient date!",
-    tone: 'dramatic',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_dramatic_005',
-    message: "A lament from the calendar! Your date is a ghost of moments past!",
-    tone: 'dramatic',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-
-  // inPast - Poetic (5 messages)
-  {
-    id: 'date_inPast_poetic_001',
-    message: "Its season passed, its vibrant moment flown. This date's bright purpose, a memory alone.",
-    tone: 'poetic',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_poetic_002',
-    message: "Like fading starlight, grace has left its form. A new dawn beckons, beyond the temporal storm.",
-    tone: 'poetic',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_poetic_003',
-    message: "The hourglass emptied, its sands no longer fall. A future moment, answers destiny's call.",
-    tone: 'poetic',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_poetic_004',
-    message: "A silent autumn, where green leaves turn to brown. This date's brief purpose, has now settled down.",
-    tone: 'poetic',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  },
-  {
-    id: 'date_inPast_poetic_005',
-    message: "The song it sang, now softly fades away. A fresh new anthem, for a brighter, future day.",
-    tone: 'poetic',
-    fieldType: 'date',
-    errorType: 'inPast',
-    category: 'Date'
-  }
+  {
+    id: "date_required_witty_001",
+    message: "Time waits for no one, but your date does!",
+    tone: "witty",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_witty_002",
+    message: "Please mark your calendar with a date.",
+    tone: "witty",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_witty_003",
+    message: "Don't leave your date hanging, fill it in!",
+    tone: "witty",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_witty_004",
+    message: "A date is a must-have, not a nice-to-have.",
+    tone: "witty",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_witty_005",
+    message: "Your future self needs this date.",
+    tone: "witty",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_dark_006",
+    message: "The shadows cling to this void; a date is demanded.",
+    tone: "dark",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_dark_007",
+    message: "Time’s ancient pact is broken. Your date is absent.",
+    tone: "dark",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_dark_008",
+    message: "A spectral silence where a date should reside.",
+    tone: "dark",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_dark_009",
+    message: "The calendar weeps for the missing day.",
+    tone: "dark",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_dark_010",
+    message: "Unveil the date, lest darkness consume it.",
+    tone: "dark",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_funny_011",
+    message: "My calendar is crying. Please pick a date!",
+    tone: "funny",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_funny_012",
+    message: "Did time just stop? We need a date!",
+    tone: "funny",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_funny_013",
+    message: "This field is so empty, it's haunted. Add a date!",
+    tone: "funny",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_funny_014",
+    message: "Your future is blank without a date. Fill it in!",
+    tone: "funny",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_funny_015",
+    message: "Is this a 'no date' zone? Please add one!",
+    tone: "funny",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_casual_016",
+    message: "Oops, forgot the date!",
+    tone: "casual",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_casual_017",
+    message: "Gotta pick a date, friend!",
+    tone: "casual",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_casual_018",
+    message: "No date, no go!",
+    tone: "casual",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_casual_019",
+    message: "Please choose a date.",
+    tone: "casual",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_casual_020",
+    message: "Date is a must-have!",
+    tone: "casual",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_sarcastic_021",
+    message: "Oh, you *forgot* the date? Shocking.",
+    tone: "sarcastic",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_sarcastic_022",
+    message: "This date field is feeling rather unloved.",
+    tone: "sarcastic",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_sarcastic_023",
+    message: "Did time stop for you? Fill this in.",
+    tone: "sarcastic",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_sarcastic_024",
+    message: "A date? How quaint. Please provide one.",
+    tone: "sarcastic",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_sarcastic_025",
+    message: "Seriously? The date. Now.",
+    tone: "sarcastic",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_nerdy_026",
+    message: "Your temporal anchor is missing, Commander.",
+    tone: "nerdy",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_nerdy_027",
+    message: "Date field unavailable. Input required.",
+    tone: "nerdy",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_nerdy_028",
+    message: "System error: Date parameter not initialized.",
+    tone: "nerdy",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_nerdy_029",
+    message: "Access denied. Chrono-data log is empty.",
+    tone: "nerdy",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_nerdy_030",
+    message: "No timestamp detected. Please input a date.",
+    tone: "nerdy",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_popCulture_031",
+    message: "This field is required, like oxygen for us.",
+    tone: "popCulture",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_popCulture_032",
+    message: "You shall not pass without a date!",
+    tone: "popCulture",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_popCulture_033",
+    message: "Where's the beef? Oh wait, it's the date.",
+    tone: "popCulture",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_popCulture_034",
+    message: "This date field is a no-go zone without input.",
+    tone: "popCulture",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_popCulture_035",
+    message: "Gotta fill this date, or it's over, over there.",
+    tone: "popCulture",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_millennial_036",
+    message: "Ugh, you gotta fill this out, no skipsies.",
+    tone: "millennial",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_millennial_037",
+    message:
+      "This date field is like, totally mandatory. Don't leave me hanging.",
+    tone: "millennial",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_millennial_038",
+    message: "Seriously, date needed. Like, yesterday.",
+    tone: "millennial",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_millennial_039",
+    message: "Your future self needs this date, fam. Fill it in.",
+    tone: "millennial",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_millennial_040",
+    message: "No date? That's a no-go. Spill the tea on the date.",
+    tone: "millennial",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_genZ_041",
+    message: "Ugh, bestie, this date is a hard no. Fill it out!",
+    tone: "genZ",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_genZ_042",
+    message: "No date? That's a red flag, fr. Gotta fill this.",
+    tone: "genZ",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_genZ_043",
+    message: "This date field is giving ghosted vibes. Populate it!",
+    tone: "genZ",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_genZ_044",
+    message: "The date is missing, period. Add it, fam!",
+    tone: "genZ",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_genZ_045",
+    message: "Big yikes, no date. Spill the tea and fill it in!",
+    tone: "genZ",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_professional_046",
+    message: "The date field is a mandatory requirement.",
+    tone: "professional",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_professional_047",
+    message: "Please provide a value for the date field.",
+    tone: "professional",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_professional_048",
+    message: "This date field cannot be left blank.",
+    tone: "professional",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_professional_049",
+    message: "A valid date must be entered in this field.",
+    tone: "professional",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_professional_050",
+    message: "The date input is required for submission.",
+    tone: "professional",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_friendly_051",
+    message: "Please tell us the date! 😊",
+    tone: "friendly",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_friendly_052",
+    message: "We need a date to move forward.",
+    tone: "friendly",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_friendly_053",
+    message: "Could you please share the date?",
+    tone: "friendly",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_friendly_054",
+    message: "A date is needed here, thanks!",
+    tone: "friendly",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_friendly_055",
+    message: "Don't forget the date, we're waiting!",
+    tone: "friendly",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_motivational_056",
+    message: "Your journey needs a start date! Let's pick one.",
+    tone: "motivational",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_motivational_057",
+    message: "Don't let the future wait! Please add a date.",
+    tone: "motivational",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_motivational_058",
+    message: "Every great plan has a date. Yours deserves one!",
+    tone: "motivational",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_motivational_059",
+    message: "Unlock your potential! A date is the first step.",
+    tone: "motivational",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_motivational_060",
+    message: "Make it official! A date brings your vision to life.",
+    tone: "motivational",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_mysterious_061",
+    message: "The sands of time await your decree.",
+    tone: "mysterious",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_mysterious_062",
+    message: "A temporal void is unacceptable.",
+    tone: "mysterious",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_mysterious_063",
+    message: "The calendar year remains incomplete.",
+    tone: "mysterious",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_mysterious_064",
+    message: "When did this event transpire?",
+    tone: "mysterious",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_mysterious_065",
+    message: "Your chronometer's silence is noted.",
+    tone: "mysterious",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_dramatic_066",
+    message: "Your destiny, unwritten! A date is MANDATORY!",
+    tone: "dramatic",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_dramatic_067",
+    message: "The calendar weeps! You MUST provide a date!",
+    tone: "dramatic",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_dramatic_068",
+    message: "Without a date, chaos reigns! FILL IT NOW!",
+    tone: "dramatic",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_dramatic_069",
+    message: "A void where a date should be! DESPERATE NEED!",
+    tone: "dramatic",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_dramatic_070",
+    message: "The clock ticks, my friend! A date is IMPERATIVE!",
+    tone: "dramatic",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_poetic_071",
+    message: "The calendar awaits your mark.",
+    tone: "poetic",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_poetic_072",
+    message: "A date, like a seed, must be sown.",
+    tone: "poetic",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_poetic_073",
+    message: "Where has the blossom of your date flown?",
+    tone: "poetic",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_poetic_074",
+    message: "This moment needs its anchor in time.",
+    tone: "poetic",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_required_poetic_075",
+    message: "The tapestry of days yearns for its thread.",
+    tone: "poetic",
+    fieldType: "date",
+    errorType: "required",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_witty_076",
+    message: "Time travel isn't a feature yet!",
+    tone: "witty",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_witty_077",
+    message: "Oops, that date's a fossil.",
+    tone: "witty",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_witty_078",
+    message: "Did you forget to rewind?",
+    tone: "witty",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_witty_079",
+    message: "Yesterday called, it wants its date back.",
+    tone: "witty",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_witty_080",
+    message: "Your date is officially history.",
+    tone: "witty",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_dark_081",
+    message: "The shadows of time have already claimed this date.",
+    tone: "dark",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_dark_082",
+    message: "This moment has long since faded into the abyss.",
+    tone: "dark",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_dark_083",
+    message: "You cannot conjure what has already passed beyond the veil.",
+    tone: "dark",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_dark_084",
+    message: "The sands of time have buried this date too deeply.",
+    tone: "dark",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_dark_085",
+    message: "This date whispers of forgotten eras, not of the present.",
+    tone: "dark",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_funny_086",
+    message: "Your date is so old, it remembers dial-up!",
+    tone: "funny",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_funny_087",
+    message: "Did you time travel? Because this date is in the past.",
+    tone: "funny",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_funny_088",
+    message: "This date is so in the past, it's practically a fossil.",
+    tone: "funny",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_funny_089",
+    message: "Oops! That date belongs in a history book.",
+    tone: "funny",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_funny_090",
+    message: "Honey, that date's expired like milk in a forgotten fridge.",
+    tone: "funny",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_casual_091",
+    message: "Oops, that date is already gone!",
+    tone: "casual",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_casual_092",
+    message: "Looks like you traveled back in time!",
+    tone: "casual",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_casual_093",
+    message: "Uh oh, that date is in the past.",
+    tone: "casual",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_casual_094",
+    message: "Can't pick a date that's already happened!",
+    tone: "casual",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_casual_095",
+    message: "That date has already passed, friend.",
+    tone: "casual",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_sarcastic_096",
+    message: "Oh, is this date from the Mesozoic era?",
+    tone: "sarcastic",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_sarcastic_097",
+    message: "Did you time travel to fill this out?",
+    tone: "sarcastic",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_sarcastic_098",
+    message: "Kindly select a date that hasn't fossilized.",
+    tone: "sarcastic",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_sarcastic_099",
+    message: "Your date is, shall we say, chronologically challenged.",
+    tone: "sarcastic",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_sarcastic_100",
+    message: "Apparently, history is your strong suit.",
+    tone: "sarcastic",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_nerdy_101",
+    message:
+      "Temporal anomaly detected: Date is in the past. Engage time-travel protocols!",
+    tone: "nerdy",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_nerdy_102",
+    message:
+      "This date is so old, it's still using dial-up. Please select a current or future date.",
+    tone: "nerdy",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_nerdy_103",
+    message:
+      "Your input date has fallen into the void. Re-sync with the present timeline.",
+    tone: "nerdy",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_nerdy_104",
+    message:
+      "Looks like your date pre-dates the Big Bang. Try a more recent epoch.",
+    tone: "nerdy",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_nerdy_105",
+    message:
+      "Error 404: Date Not Found in current temporal frame. Select a valid future date.",
+    tone: "nerdy",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_popCulture_106",
+    message: '"You can\'t go back to the future with this date."',
+    tone: "popCulture",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_popCulture_107",
+    message: "\"This date is so old, it's like, 'Be Kind, Rewind' old.\"",
+    tone: "popCulture",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_popCulture_108",
+    message: '"Error 404: Past date not found. Try again, maybe?"',
+    tone: "popCulture",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_popCulture_109",
+    message:
+      '"Looks like this date is stuck in the past, like dial-up internet."',
+    tone: "popCulture",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_popCulture_110",
+    message: '"This date is ancient history, my dude. Pick a newer one."',
+    tone: "popCulture",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_millennial_111",
+    message: "Whoa, that date is so last century! Pick a new one.",
+    tone: "millennial",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_millennial_112",
+    message: "This date is totally ancient history, fam. Try again.",
+    tone: "millennial",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_millennial_113",
+    message: "Uh oh, that date is giving serious flashback vibes.",
+    tone: "millennial",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_millennial_114",
+    message: "Your date is in the past, and that's not the vibe.",
+    tone: "millennial",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_millennial_115",
+    message: 'This date is giving major "remember when?" energy.',
+    tone: "millennial",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_genZ_116",
+    message: "Yo, date gotta be future, bestie! 💀",
+    tone: "genZ",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_genZ_117",
+    message: "Nah, that date is giving major past vibes. 🙅‍♀️",
+    tone: "genZ",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_genZ_118",
+    message: "Big yikes, you can't pick dates that already happened. 😬",
+    tone: "genZ",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_genZ_119",
+    message: "This date is ancient history, no cap. 👑",
+    tone: "genZ",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_genZ_120",
+    message: "Future dates only, fam, for real. ✨",
+    tone: "genZ",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_professional_121",
+    message: "The date entered is in the past.",
+    tone: "professional",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_professional_122",
+    message: "Please select a future date.",
+    tone: "professional",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_professional_123",
+    message: "This date has already occurred.",
+    tone: "professional",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_professional_124",
+    message: "Invalid entry: Date must be in the future.",
+    tone: "professional",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_professional_125",
+    message: "The selected date cannot precede today.",
+    tone: "professional",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_friendly_126",
+    message: "Oops, that date looks like it's already passed!",
+    tone: "friendly",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_friendly_127",
+    message: "Let's try a date from today or the future.",
+    tone: "friendly",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_friendly_128",
+    message: "It seems this date has already gone by.",
+    tone: "friendly",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_friendly_129",
+    message: "Could you pick a date that's happening now or later?",
+    tone: "friendly",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_friendly_130",
+    message: "Please choose a date from the present or beyond!",
+    tone: "friendly",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_motivational_131",
+    message: "Your future awaits! Please select a date ahead.",
+    tone: "motivational",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_motivational_132",
+    message: "Embrace tomorrow! This date is in the past.",
+    tone: "motivational",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_motivational_133",
+    message: "Seize the day! Choose a future date.",
+    tone: "motivational",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_motivational_134",
+    message: "Let's look forward! This date has passed.",
+    tone: "motivational",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_motivational_135",
+    message: "Your journey continues! Pick a date that's yet to come.",
+    tone: "motivational",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_mysterious_136",
+    message: "The sands of time flow backward.",
+    tone: "mysterious",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_mysterious_137",
+    message: "Echoes precede arrival.",
+    tone: "mysterious",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_mysterious_138",
+    message: "Where has this moment gone?",
+    tone: "mysterious",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_mysterious_139",
+    message: "The chronometer weeps.",
+    tone: "mysterious",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_mysterious_140",
+    message: "A forgotten sunrise.",
+    tone: "mysterious",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_dramatic_141",
+    message: "Your chosen date is lost to the mists of time!",
+    tone: "dramatic",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_dramatic_142",
+    message: "This date has already withered and faded!",
+    tone: "dramatic",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_dramatic_143",
+    message: "You cannot conjure a date from the forgotten past!",
+    tone: "dramatic",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_dramatic_144",
+    message: "The sands of time have buried this date!",
+    tone: "dramatic",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_dramatic_145",
+    message: "This date is a ghost, a memory!",
+    tone: "dramatic",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_poetic_146",
+    message: "The sands of time have long since flowed past this moment.",
+    tone: "poetic",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_poetic_147",
+    message: "This date has faded into yesterday's echo.",
+    tone: "poetic",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_poetic_148",
+    message: "The present awaits; this date belongs to memory's embrace.",
+    tone: "poetic",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_poetic_149",
+    message: "A bloom from a season already gone.",
+    tone: "poetic",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inPast_poetic_150",
+    message: "Your chosen moment has already danced with the dawn.",
+    tone: "poetic",
+    fieldType: "date",
+    errorType: "inPast",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_witty_151",
+    message: "Time traveler? Please use the present.",
+    tone: "witty",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_witty_152",
+    message: "Your date seems a bit too far ahead.",
+    tone: "witty",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_witty_153",
+    message: "Is this date a prophecy? Keep it real.",
+    tone: "witty",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_witty_154",
+    message: "Don't send me to the future, I'm busy now.",
+    tone: "witty",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_witty_155",
+    message: "This date is still in beta. Try again later!",
+    tone: "witty",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_dark_156",
+    message: "The sands of time have not yet turned to reveal this date.",
+    tone: "dark",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_dark_157",
+    message: "This moment belongs to a future yet unwritten, a forbidden dawn.",
+    tone: "dark",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_dark_158",
+    message: "You cannot bind the clock to a time beyond its current grasp.",
+    tone: "dark",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_dark_159",
+    message:
+      "This date lurks in the shadows of tomorrow, a phantom not yet born.",
+    tone: "dark",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_dark_160",
+    message: "The veil of the present has not lifted for this spectral date.",
+    tone: "dark",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_funny_161",
+    message: "Your date is so far in the future, it needs a time machine.",
+    tone: "funny",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_funny_162",
+    message: "Did you borrow this date from a DeLorean?",
+    tone: "funny",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_funny_163",
+    message: "This date is so future, it's already vintage.",
+    tone: "funny",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_funny_164",
+    message: "Please, no prophecies in the date field.",
+    tone: "funny",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_funny_165",
+    message: "Your date is further out than my last vacation.",
+    tone: "funny",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_casual_166",
+    message: "Oops, that date hasn't happened yet!",
+    tone: "casual",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_casual_167",
+    message: "Whoa there, pick a date in the past or present!",
+    tone: "casual",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_casual_168",
+    message: "Looks like you're a bit too far ahead on this one.",
+    tone: "casual",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_casual_169",
+    message: "Please choose a date that's already here!",
+    tone: "casual",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_casual_170",
+    message: "This date is in the future, try another!",
+    tone: "casual",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_sarcastic_171",
+    message: "Oh, you're *really* trying to time travel? Cute.",
+    tone: "sarcastic",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_sarcastic_172",
+    message: "So, the future hasn't happened yet. Shocking, I know.",
+    tone: "sarcastic",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_sarcastic_173",
+    message:
+      "Unless you've invented a DeLorean, this date is a tad optimistic.",
+    tone: "sarcastic",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_sarcastic_174",
+    message:
+      "Are we expecting a paradox? Because this date is doing a bang-up job.",
+    tone: "sarcastic",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_sarcastic_175",
+    message: 'Did you forget to set your calendar to "already happened"?',
+    tone: "sarcastic",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_nerdy_176",
+    message:
+      "Your input date is in the future. Please set a date within the current timeline.",
+    tone: "nerdy",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_nerdy_177",
+    message: "Temporal anomaly detected: Date must not be post-current epoch.",
+    tone: "nerdy",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_nerdy_178",
+    message: "Error 404: Date not found in past. Select a prior event.",
+    tone: "nerdy",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_nerdy_179",
+    message: "This date is beyond the current simulation's render distance.",
+    tone: "nerdy",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_nerdy_180",
+    message:
+      "Your input has traveled further into the future than allowed by this module.",
+    tone: "nerdy",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_popCulture_181",
+    message: "Hold up, that date ain't even born yet!",
+    tone: "popCulture",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_popCulture_182",
+    message: "Your date is in the uncanny valley of the future.",
+    tone: "popCulture",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_popCulture_183",
+    message:
+      "This date is further out than the next season of *[Popular Show]*.",
+    tone: "popCulture",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_popCulture_184",
+    message: "Future you would be confused by this date, fam.",
+    tone: "popCulture",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_popCulture_185",
+    message: "That date is so far out, it's practically a prophecy.",
+    tone: "popCulture",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_millennial_186",
+    message:
+      "Chill, that date is *way* too far out. Pick something less sci-fi.",
+    tone: "millennial",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_millennial_187",
+    message: "Hold up, that date hasn't even dropped yet, fam. Try again.",
+    tone: "millennial",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_millennial_188",
+    message:
+      "Whoa, you're trying to book a flight to the future? Not today, chief.",
+    tone: "millennial",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_millennial_189",
+    message:
+      'That date is giving me major "when is the next Blink-182 album?" vibes. Too far.',
+    tone: "millennial",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_millennial_190",
+    message:
+      "Is that date in the next millennium? We need something a bit more now-ish.",
+    tone: "millennial",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_genZ_191",
+    message: "Bro, that date gotta be in the past, fr. 💀",
+    tone: "genZ",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_genZ_192",
+    message: "No cap, future dates are a no-go rn.",
+    tone: "genZ",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_genZ_193",
+    message: "Vibe check failed, date ain't valid, fam.",
+    tone: "genZ",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_genZ_194",
+    message: "This date is giving major ✨future vibes✨, nope.",
+    tone: "genZ",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_genZ_195",
+    message: "Big yikes, that date is too far ahead. 🚩",
+    tone: "genZ",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_professional_196",
+    message: "Please enter a date in the past.",
+    tone: "professional",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_professional_197",
+    message: "The selected date must not be in the future.",
+    tone: "professional",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_professional_198",
+    message: "Future dates are not permitted for this field.",
+    tone: "professional",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_professional_199",
+    message: "Kindly provide a date that has already occurred.",
+    tone: "professional",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_professional_200",
+    message: "This date cannot be in the future.",
+    tone: "professional",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_friendly_201",
+    message: "Please pick a date in the past or today!",
+    tone: "friendly",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_friendly_202",
+    message: "Looks like that date is a bit too far ahead.",
+    tone: "friendly",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_friendly_203",
+    message: "Let's choose a date that's already here!",
+    tone: "friendly",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_friendly_204",
+    message: "Could you select a date before this one?",
+    tone: "friendly",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_friendly_205",
+    message: "This date hasn't happened yet, try another!",
+    tone: "friendly",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_motivational_206",
+    message: "Your future awaits! Please select a date that's here and now.",
+    tone: "motivational",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_motivational_207",
+    message: "Seize the day! Choose a date within today's embrace.",
+    tone: "motivational",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_motivational_208",
+    message: "Embrace the present! Pick a date that's already dawned.",
+    tone: "motivational",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_motivational_209",
+    message: "Your journey begins now! Select a date that's arrived.",
+    tone: "motivational",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_motivational_210",
+    message: "The perfect moment is today! Choose a date that's current.",
+    tone: "motivational",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_mysterious_211",
+    message: "The veil of time has not yet lifted for this date.",
+    tone: "mysterious",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_mysterious_212",
+    message: "A glimpse too soon into what is to come.",
+    tone: "mysterious",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_mysterious_213",
+    message: "The sands of tomorrow are not yet settled.",
+    tone: "mysterious",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_mysterious_214",
+    message: "This moment is a phantom, not yet solidified.",
+    tone: "mysterious",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_mysterious_215",
+    message: "Seek a date already etched in the past.",
+    tone: "mysterious",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_dramatic_216",
+    message: "Your chosen date looms! Leap into the now!",
+    tone: "dramatic",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_dramatic_217",
+    message: "The future calls, but your date is too far!",
+    tone: "dramatic",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_dramatic_218",
+    message: "Time itself rebels! Choose a present date!",
+    tone: "dramatic",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_dramatic_219",
+    message: "This date is a phantom! Ground it in today!",
+    tone: "dramatic",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_dramatic_220",
+    message: "You defy destiny! Your date must be NOW!",
+    tone: "dramatic",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_poetic_221",
+    message: "The future's bloom awaits its time.",
+    tone: "poetic",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_poetic_222",
+    message: "Your chosen date has not yet dawned.",
+    tone: "poetic",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_poetic_223",
+    message: "This moment is a seed unsprouted.",
+    tone: "poetic",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_poetic_224",
+    message: "Let time unfurl its destined page.",
+    tone: "poetic",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_inFuture_poetic_225",
+    message: "The present calls; the future sleeps.",
+    tone: "poetic",
+    fieldType: "date",
+    errorType: "inFuture",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_witty_226",
+    message:
+      "Your date seems to have time-traveled. Please ground it in reality.",
+    tone: "witty",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_witty_227",
+    message:
+      "Is this date in the Gregorian calendar, or one of your own invention?",
+    tone: "witty",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_witty_228",
+    message: "This date is as plausible as a unicorn at a tea party.",
+    tone: "witty",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_witty_229",
+    message:
+      "Looks like your date is playing hide-and-seek with valid formats.",
+    tone: "witty",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_witty_230",
+    message: "This date is so invalid, it's making calendars weep.",
+    tone: "witty",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_dark_231",
+    message: "The veil of time has been rent; your date is an abyss.",
+    tone: "dark",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_dark_232",
+    message: "This calendar's shadow conceals no such day.",
+    tone: "dark",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_dark_233",
+    message: "Your chosen date echoes with an unhallowed void.",
+    tone: "dark",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_dark_234",
+    message: "The cosmic alignment rejects this temporal anomaly.",
+    tone: "dark",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_dark_235",
+    message: "A whisper from beyond: this date is eternally lost.",
+    tone: "dark",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_funny_236",
+    message: "Date format not found. Did you use a calendar or a crystal ball?",
+    tone: "funny",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_funny_237",
+    message:
+      "That date is so invalid, it doesn't even exist in this dimension.",
+    tone: "funny",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_funny_238",
+    message: "Your date is a bit… abstract. Try a number, any number!",
+    tone: "funny",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_funny_239",
+    message: "Houston, we have a date problem. It's not even a date!",
+    tone: "funny",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_funny_240",
+    message: "Is this date a secret code? Because it's not making sense.",
+    tone: "funny",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_casual_241",
+    message: "Oops, that date doesn't look right!",
+    tone: "casual",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_casual_242",
+    message: "Hmm, something's up with that date.",
+    tone: "casual",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_casual_243",
+    message: "That date format is a bit wonky, friend.",
+    tone: "casual",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_casual_244",
+    message: "Could you double-check that date, please?",
+    tone: "casual",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_casual_245",
+    message: "That date is a no-go, sorry!",
+    tone: "casual",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_sarcastic_246",
+    message: "Oh, you thought *that* was a date? How quaint.",
+    tone: "sarcastic",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_sarcastic_247",
+    message: "Did you invent a new calendar, or...?",
+    tone: "sarcastic",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_sarcastic_248",
+    message: "That date clearly needs a time machine.",
+    tone: "sarcastic",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_sarcastic_249",
+    message: "Your date is... abstract. Very abstract.",
+    tone: "sarcastic",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_sarcastic_250",
+    message: "Is that date even in this dimension?",
+    tone: "sarcastic",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_nerdy_251",
+    message: "Date format is corrupted, like a glitched save file.",
+    tone: "nerdy",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_nerdy_252",
+    message: "Invalid date input detected. Core processing error.",
+    tone: "nerdy",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_nerdy_253",
+    message: "Your date entry is not in the expected temporal matrix.",
+    tone: "nerdy",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_nerdy_254",
+    message: "Syntax error in date field. Expecting YYYY-MM-DD, received null.",
+    tone: "nerdy",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_nerdy_255",
+    message: "This date value is out of bounds. Try a valid reality.",
+    tone: "nerdy",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_popCulture_256",
+    message: "This date is not valid. Not like this!",
+    tone: "popCulture",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_popCulture_257",
+    message: "Your date is so wrong, it’s like a plot hole.",
+    tone: "popCulture",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_popCulture_258",
+    message: "Invalid date. You shall not pass!",
+    tone: "popCulture",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_popCulture_259",
+    message: "This date? It’s a nope from me, dawg.",
+    tone: "popCulture",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_popCulture_260",
+    message: "Error 404: Date Not Found (in this reality).",
+    tone: "popCulture",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_millennial_261",
+    message: "Ugh, that date is totally not the vibe. Try again!",
+    tone: "millennial",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_millennial_262",
+    message: "That date? So last decade. Fix it, fam.",
+    tone: "millennial",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_millennial_263",
+    message: "Your date is giving major Y2K bug vibes. 😬",
+    tone: "millennial",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_millennial_264",
+    message: "Did you even check the calendar? This date is whack.",
+    tone: "millennial",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_millennial_265",
+    message:
+      "This date is giving me dial-up internet flashbacks. Get it right.",
+    tone: "millennial",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_genZ_266",
+    message: "Yo, that date is NOT it. 💀",
+    tone: "genZ",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_genZ_267",
+    message: "Big yikes on that date, bestie. Try again!",
+    tone: "genZ",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_genZ_268",
+    message: "This date is giving major red flag, fr. 🚩",
+    tone: "genZ",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_genZ_269",
+    message: "Nah, that date is giving sus. Fix it! 🤨",
+    tone: "genZ",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_genZ_270",
+    message: "Date input is bussin' with errors, fam.",
+    tone: "genZ",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_professional_271",
+    message: "Please enter a valid date.",
+    tone: "professional",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_professional_272",
+    message: "The date entered is not recognized.",
+    tone: "professional",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_professional_273",
+    message: "The date format is incorrect.",
+    tone: "professional",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_professional_274",
+    message: "A valid date is required for this field.",
+    tone: "professional",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_professional_275",
+    message: "The provided date is invalid.",
+    tone: "professional",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_friendly_276",
+    message: "Oops! That date looks a little tricky.",
+    tone: "friendly",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_friendly_277",
+    message: "Hmm, that date doesn't seem quite right.",
+    tone: "friendly",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_friendly_278",
+    message: "Could you double-check that date for me?",
+    tone: "friendly",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_friendly_279",
+    message: "Let's try that date again, sweetie!",
+    tone: "friendly",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_friendly_280",
+    message: "That date isn't formatted as expected.",
+    tone: "friendly",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_motivational_281",
+    message: "Your date needs a little more sparkle! ✨",
+    tone: "motivational",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_motivational_282",
+    message: "Let's find a date that truly shines. 🌟",
+    tone: "motivational",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_motivational_283",
+    message: "This date is a bit shy, try a different one! 😊",
+    tone: "motivational",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_motivational_284",
+    message: "Dream a little bigger with your date choice! ☁️",
+    tone: "motivational",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_motivational_285",
+    message: "Unlock your perfect date, keep exploring! 🔑",
+    tone: "motivational",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_mysterious_286",
+    message: "The veil of time is obscured.",
+    tone: "mysterious",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_mysterious_287",
+    message: "Your temporal anchor is adrift.",
+    tone: "mysterious",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_mysterious_288",
+    message: "The calendar whispers a falsehood.",
+    tone: "mysterious",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_mysterious_289",
+    message: "A paradox in the cosmic flow.",
+    tone: "mysterious",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_mysterious_290",
+    message: "The sequence of moments is broken.",
+    tone: "mysterious",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_dramatic_291",
+    message: "Alas, the date you've provided is a phantom!",
+    tone: "dramatic",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_dramatic_292",
+    message: "Your date is a twisted mockery of time!",
+    tone: "dramatic",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_dramatic_293",
+    message: "This date is an abomination, a temporal stain!",
+    tone: "dramatic",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_dramatic_294",
+    message: "A dark, corrupted date, unfit for the calendar!",
+    tone: "dramatic",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_dramatic_295",
+    message: "Your input mocks the very fabric of dates!",
+    tone: "dramatic",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_poetic_296",
+    message: "The calendar weeps for this misplaced moon.",
+    tone: "poetic",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_poetic_297",
+    message: "This date's whisper is lost in time's echo.",
+    tone: "poetic",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_poetic_298",
+    message: "A phantom day haunts this earthly sphere.",
+    tone: "poetic",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_poetic_299",
+    message: "The sun has set on this date's shadowed path.",
+    tone: "poetic",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
+  {
+    id: "date_invalid_poetic_300",
+    message: "Your temporal bloom has yet to unfurl.",
+    tone: "poetic",
+    fieldType: "date",
+    errorType: "invalid",
+    category: "Dates",
+  },
 ];

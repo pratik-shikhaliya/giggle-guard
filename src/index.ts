@@ -15,7 +15,7 @@ class GiggleGuard {
 
   constructor(config: GiggleGuardConfig = {}) {
     this.config = {
-      defaultTone: "funny",
+      defaultTone: "random",
       trackUsedMessages: true,
       fallbackToGeneric: true,
       strictValidation: false,
@@ -65,7 +65,10 @@ class GiggleGuard {
       if (toneFiltered.length > 0) {
         filteredMessages = toneFiltered;
       }
-    } else if (this.config.defaultTone) {
+    } else if (
+      this.config.defaultTone &&
+      this.config.defaultTone !== "random"
+    ) {
       const defaultToneFiltered = filteredMessages.filter(
         (msg) => msg.tone === this.config.defaultTone
       );
@@ -73,6 +76,7 @@ class GiggleGuard {
         filteredMessages = defaultToneFiltered;
       }
     }
+    // else, no tone filtering — allow all
 
     // Exclude used messages if requested
     if (excludeUsed) {

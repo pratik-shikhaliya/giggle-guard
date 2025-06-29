@@ -1,7 +1,7 @@
 {
   "name": "giggle-guard",
   "version": "1.0.0",
-  "description": "🛡️ Giggle Guard - A curated collection of 500+ hilarious validation messages that turn boring form errors into delightful user experiences. Make your users smile instead of rage-quit!",
+  "description": "🛡️ Giggle Guard - A curated collection of 3000+ hilarious validation messages that turn boring form errors into delightful user experiences. Make your users smile instead of rage-quit!",
   "main": "dist/index.js",
   "type": "module",
   "module": "dist/index.esm.js",

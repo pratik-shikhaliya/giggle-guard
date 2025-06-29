@@ -1,56 +1,56 @@
 export type Tone =
-  | "witty"
-  | "dark"
-  | "funny"
   | "casual"
-  | "sarcastic"
-  | "nerdy"
-  | "popCulture"
-  | "millennial"
-  | "genZ"
-  | "professional"
+  | "dark"
+  | "dramatic"
   | "friendly"
+  | "funny"
+  | "genZ"
+  | "millennial"
   | "motivational"
   | "mysterious"
-  | "dramatic"
-  | "poetic";
+  | "nerdy"
+  | "poetic"
+  | "popCulture"
+  | "professional"
+  | "sarcastic"
+  | "witty";
 
 export type FieldType =
-  | "name"
+  | "address"
+  | "checkbox"
+  | "creditCard"
+  | "date"
   | "email"
+  | "file"
+  | "general"
+  | "name"
   | "password"
   | "phone"
-  | "address"
-  | "zipcode"
-  | "date"
-  | "time"
-  | "file"
-  | "creditCard"
-  | "url"
-  | "checkbox"
   | "radio"
   | "select"
-  | "general";
+  | "time"
+  | "url"
+  | "zipcode";
 
 export type ErrorType =
-  | "required"
-  | "invalid"
-  | "tooShort"
-  | "tooLong"
-  | "exists"
-  | "tooWeak"
   | "doesntMatch"
-  | "inPast"
-  | "inFuture"
-  | "invalidType"
-  | "tooLarge"
-  | "tooSmall"
+  | "duplicate"
   | "expired"
-  | "invalidCVV"
+  | "exists"
   | "format"
+  | "inFuture"
+  | "inPast"
+  | "invalid"
+  | "invalidCVV"
+  | "invalidType"
   | "notSelected"
   | "outOfRange"
-  | "duplicate";
+  | "required"
+  | "tooLarge"
+  | "tooLong"
+  | "tooShort"
+  | "tooSmall"
+  | "tooWeak";
 
 export interface ValidationMessage {
   id: string;
@@ -73,7 +73,7 @@ export interface ValidationMessageMap {
 }
 
 export interface GiggleGuardConfig {
-  defaultTone?: Tone;
+  defaultTone?: Tone | "random";
   trackUsedMessages?: boolean;
   fallbackToGeneric?: boolean;
   strictValidation?: boolean;

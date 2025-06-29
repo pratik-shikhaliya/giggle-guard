@@ -1,14 +1,14 @@
 # 🛡️ Giggle Guard
 
-> 500+ hilarious validation messages that make your users smile instead of rage-quit when they mess up forms. Because who says error messages have to be boring?
+> 3000+ hilarious validation messages that make your users smile instead of rage-quit when they mess up forms. Because who says error messages have to be boring?
 
 ## 🎯 Why Giggle Guard?
 
-- **🚫 Users hate boring error messages** → Make them laugh instead
-- **🎭 Generic validation is forgettable** → Stand out with personality
-- **📋 Copy-paste ready messages** → No more "Field is required" monotony
-- **📈 Boost user engagement** → Happy users = better retention
-- **🌟 Open source humor** → Community-driven comedy gold
+- **🚫 Users hate boring error messages** → Make them laugh instead of cry 😭
+- **🎭 Generic validation is forgettable** → Stand out like a glitter bomb in a library
+- **📋 Copy-paste ready messages** → Say goodbye to “Field is required.” Forever. 🔥
+- **📈 Boost user engagement** → Happy users fill forms. Sad users click away.
+- **🌟 Open source humor** → Fueled by developer memes and community chuckles
 
 ## 📦 Installation
 
@@ -29,11 +29,11 @@ pnpm add giggle-guard
 ### One-liner Usage
 
 ```ts
-import { getMessage } from 'giggle-guard';
+import { getMessage } from "giggle-guard";
 
 const message = getMessage({
-  fieldType: 'email',
-  errorType: 'required'
+  fieldType: "email",
+  errorType: "required",
 });
 console.log(message); // "Even my spam folder has higher standards"
 ```
@@ -41,57 +41,81 @@ console.log(message); // "Even my spam folder has higher standards"
 ### Instance Usage
 
 ```ts
-import { GiggleGuard } from 'giggle-guard';
+import { GiggleGuard } from "giggle-guard";
 
 const guard = new GiggleGuard({
-  defaultTone: 'sarcastic',
-  trackUsedMessages: true
+  defaultTone: "sarcastic",
+  trackUsedMessages: true,
 });
 
 const funnyMessage = guard.getMessage({
-  fieldType: 'password',
-  errorType: 'tooWeak',
-  tone: 'funny'
+  fieldType: "password",
+  errorType: "tooWeak",
+  tone: "funny",
 });
 ```
 
 ### Multiple Messages
 
 ```ts
-import { getMessages } from 'giggle-guard';
+import { getMessages } from "giggle-guard";
 
-const messages = getMessages({
-  fieldType: 'email',
-  errorType: 'invalid'
-}, 3);
+const messages = getMessages(
+  {
+    fieldType: "email",
+    errorType: "invalid",
+  },
+  3
+);
 ```
 
 ## 🧠 Message Samples by Tone
 
 ### 🎭 Funny Tone
 
-- ✅ `email` + ❌ `required` → 💬 "Even my spam folder has higher standards"
-- ✅ `password` + ❌ `tooWeak` → 💬 "This password couldn't protect a cookie from a toddler"
+- ✅ `email` + ❌ `required` → 💬 "Even my spam folder has higher standards."
+- ✅ `password` + ❌ `tooShort` → 💬 "Shorter than my attention span."
+- ✅ `name` + ❌ `required` → 💬 "C’mon, even mysterious strangers have names."
+
+---
 
 ### 🥲 Sarcastic Tone
 
-- ✅ `address` + ❌ `required` → 💬 "We can't ship to the void of space"
-- ✅ `creditCard` + ❌ `invalid` → 💬 "This card number is more fictional than unicorns"
+- ✅ `address` + ❌ `required` → 💬 "Oh sure, we’ll guess where you live."
+- ✅ `url` + ❌ `invalid` → 💬 "Great. You broke the internet."
+- ✅ `password` + ❌ `tooShort` → 💬 "That’s adorable. Now try a real password."
+
+---
 
 ### 😎 GenZ Tone
 
-- ✅ `username` + ❌ `duplicate` → 💬 "This username is already taken, bestie"
-- ✅ `email` + ❌ `invalid` → 💬 "Your email is giving fake profile energy"
+- ✅ `name` + ❌ `duplicate` → 💬 "Taken already, bestie 💅"
+- ✅ `email` + ❌ `invalid` → 💬 "This email is giving ‘fake account’ vibes."
+- ✅ `phone` + ❌ `required` → 💬 "Phone please 📱 or you’re getting ghosted."
+
+---
 
 ### 👔 Professional Tone
 
-- ✅ `date` + ❌ `invalid` → 💬 "Please enter a valid date format"
-- ✅ `password` + ❌ `tooShort` → 💬 "Your password must meet the minimum length"
+- ✅ `date` + ❌ `invalid` → 💬 "Please enter a valid date in DD/MM/YYYY format."
+- ✅ `password` + ❌ `tooShort` → 💬 "Password must be at least 8 characters long."
+- ✅ `name` + ❌ `required` → 💬 "This field is required to proceed."
 
-### 🤗 Wholesome Tone
+---
 
-- ✅ `phone` + ❌ `invalid` → 💬 "Let's try that phone number again, friend!"
-- ✅ `message` + ❌ `tooShort` → 💬 "Your message could use a few more words, buddy!"
+### 💪 Motivational Tone
+
+- ✅ `phone` + ❌ `invalid` → 💬 "You’re just one digit away from getting it right!"
+- ✅ `name` + ❌ `required` → 💬 "You’ve got this — just add your name!"
+- ✅ `email` + ❌ `tooShort` → 💬 "A few more characters and you’re golden."
+
+---
+
+### 🤓 Nerdy Tone
+
+- ✅ `file` + ❌ `invalidType` → 💬 "Expected MIME type: application/awesome, got nonsense."
+- ✅ `email` + ❌ `invalid` → 💬 "Regex failed to validate this sad string."
+- ✅ `password` + ❌ `tooShort` → 💬 "Insufficient entropy. Try adding 3 dragons and a number."
 
 ## 🛠️ All Available Methods
 
@@ -115,31 +139,47 @@ updateConfig({ ... })
 
 ## ⚙️ Configuration Options
 
-| Option              | Type    | Default | Description                        |
-| ------------------- | ------- | ------- | ---------------------------------- |
-| `defaultTone`       | string  | 'funny' | Humor style to use                 |
-| `trackUsedMessages` | boolean | true    | Prevent repetition                 |
-| `fallbackToGeneric` | boolean | true    | Use generic messages if none found |
+Giggle Guard comes with sensible defaults out of the box. Here's the configuration it uses internally unless you override it:
+
+```ts
+{
+  defaultTone: "random",       // Use a random tone unless specified
+  trackUsedMessages: true,     // Avoid repeating the same message
+  fallbackToGeneric: true,     // Fallback to generic messages if none match
+  strictValidation: false      // Log a warning instead of throwing an error
+}
+```
+
+| Option              | Type      | Default | Description                                                                |
+| ------------------- | --------- | ------- | -------------------------------------------------------------------------- |
+| `defaultTone`       | `Tone`    | `funny` | Sets the vibe for your messages. Want chaos? Set it to "random"!🎲         |
+| `trackUsedMessages` | `boolean` | `true`  | Stops repeats like your friend who tells the same joke 5 times. 🤐         |
+| `fallbackToGeneric` | `boolean` | `true`  | If nothing fits, it'll pull out a trusty backup message from the vault. 🗃️ |
+| `strictValidation`  | `boolean` | `false` | Turn this on to yell at bad input like a grumpy librarian. 📚🚫            |
 
 ## ⚛️ Framework Integration Examples
 
 ### React Hook Form
 
 ```tsx
-import { useForm } from 'react-hook-form';
-import { getMessage } from 'giggle-guard';
+import { useForm } from "react-hook-form";
+import { getMessage } from "giggle-guard";
 
 function MyForm() {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   const getErrorMessage = (fieldType: string, errorType: string) => {
-    return getMessage({ fieldType, errorType, tone: 'millennial' });
+    return getMessage({ fieldType, errorType, tone: "millennial" });
   };
 
   return (
     <form onSubmit={handleSubmit(() => {})}>
-      <input {...register('email', { required: true })} type="email" />
-      {errors.email && <p>{getErrorMessage('email', 'required')}</p>}
+      <input {...register("email", { required: true })} type="email" />
+      {errors.email && <p>{getErrorMessage("email", "required")}</p>}
     </form>
   );
 }
@@ -148,15 +188,15 @@ function MyForm() {
 ### Formik
 
 ```tsx
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { getMessage } from 'giggle-guard';
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import { getMessage } from "giggle-guard";
 
 <Formik
-  initialValues={{ email: '' }}
-  validate={values => {
+  initialValues={{ email: "" }}
+  validate={(values) => {
     const errors: any = {};
     if (!values.email) {
-      errors.email = getMessage({ fieldType: 'email', errorType: 'required' });
+      errors.email = getMessage({ fieldType: "email", errorType: "required" });
     }
     return errors;
   }}
@@ -166,25 +206,27 @@ import { getMessage } from 'giggle-guard';
     <Field name="email" type="email" />
     <ErrorMessage name="email" component="div" />
   </Form>
-</Formik>
+</Formik>;
 ```
 
 ### Vue + Vuelidate
 
 ```vue
 <script setup>
-import { ref } from 'vue';
-import { useVuelidate } from '@vuelidate/core';
-import { required, email } from '@vuelidate/validators';
-import { getMessage } from 'giggle-guard';
+import { ref } from "vue";
+import { useVuelidate } from "@vuelidate/core";
+import { required, email } from "@vuelidate/validators";
+import { getMessage } from "giggle-guard";
 
-const form = ref({ email: '' });
+const form = ref({ email: "" });
 const rules = { email: { required, email } };
 const $v = useVuelidate(rules, form);
 
 const getEmailError = () => {
-  if (!$v.value.email.required) return getMessage({ fieldType: 'email', errorType: 'required' });
-  if (!$v.value.email.email) return getMessage({ fieldType: 'email', errorType: 'invalid' });
+  if (!$v.value.email.required)
+    return getMessage({ fieldType: "email", errorType: "required" });
+  if (!$v.value.email.email)
+    return getMessage({ fieldType: "email", errorType: "invalid" });
 };
 </script>
 ```
@@ -219,14 +261,14 @@ getEmailError() {
 - **Ajv** - JSON schema validator
 
 ```ts
-import * as yup from 'yup';
-import { getMessage } from 'giggle-guard';
+import * as yup from "yup";
+import { getMessage } from "giggle-guard";
 
 const schema = yup.object({
   email: yup
     .string()
-    .required(() => getMessage({ fieldType: 'email', errorType: 'required' }))
-    .email(() => getMessage({ fieldType: 'email', errorType: 'invalid' }))
+    .required(() => getMessage({ fieldType: "email", errorType: "required" }))
+    .email(() => getMessage({ fieldType: "email", errorType: "invalid" })),
 });
 ```
 
@@ -275,4 +317,4 @@ If Giggle Guard made you (or your users) smile, give us a ⭐ and spread the lau
 
 **Made with ❤️ by Pratik Shikhaliya — who’s tired of boring error messages.**
 
-*Remember: Life’s too short for “This field is required”*
+_Remember: Life’s too short for “This field is required”_

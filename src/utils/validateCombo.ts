@@ -2,20 +2,12 @@ import { FieldType, ErrorType } from "../types";
 
 // Map valid error types per field type
 const validCombos: Record<FieldType, ErrorType[]> = {
-  name: ["required", "invalid", "tooShort", "tooLong", "exists"],
-  email: ["required", "invalid", "exists", "duplicate"],
-  password: ["required", "tooShort", "tooWeak"],
-  phone: ["required", "invalid", "format"],
   address: ["required", "tooShort", "tooLong"],
-  zipcode: ["required", "invalid", "format"],
-  date: ["required", "inPast", "inFuture", "invalid"],
-  time: ["required", "invalid", "outOfRange"],
-  file: ["required", "invalidType", "tooLarge", "tooSmall"],
-  creditCard: ["required", "invalid", "expired", "invalidCVV"],
-  url: ["required", "invalid"],
   checkbox: ["required", "notSelected"],
-  radio: ["required", "notSelected"],
-  select: ["required", "notSelected"],
+  creditCard: ["required", "invalid", "expired", "invalidCVV"],
+  date: ["required", "inPast", "inFuture", "invalid"],
+  email: ["required", "invalid", "exists", "duplicate"],
+  file: ["required", "invalidType", "tooLarge", "tooSmall"],
   general: [
     "required",
     "invalid",
@@ -25,6 +17,14 @@ const validCombos: Record<FieldType, ErrorType[]> = {
     "duplicate",
     "notSelected",
   ],
+  name: ["required", "invalid", "tooShort", "tooLong", "exists"],
+  password: ["required", "tooShort", "tooWeak"],
+  phone: ["required", "invalid", "format"],
+  radio: ["required", "notSelected"],
+  select: ["required", "notSelected"],
+  time: ["required", "invalid", "outOfRange"],
+  url: ["required", "invalid"],
+  zipcode: ["required", "invalid", "format"],
 };
 
 export const validateFieldErrorCombo = (
